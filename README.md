@@ -1,17 +1,26 @@
-# Note: Part of this project repository has been migrated to https://github.com/data-storage-lab/BugBench
+## TaintAnalysis
+
+The repo is part of our Persistent Memory project, and the result of PM-related drivers was published in ACM TRANSACTIONS ON STORAGE(TOS):
+
+-"Understanding Persistent-Memory Related Issues in the Linux Kernel(https://arxiv.org/abs/2307.04095)", Om Rameshwar Gatla, Duo Zhang, Wei Xu, Mai Zheng, ACM TRANSACTIONS ON STORAGE(TOS), 2023
 
 
-# Understanding Persistent Memory Related Issues in the Linux Kernel
+## DrChecker+
 
-This repository contains patches submitted to the Linux Kernel source tree that fix correctness issues related to Persistent Memory (PM) devices.
+Step1: compile kerenl drviers with wllvm
 
-This repository contains following four folders: 
-- **Dinit**: Contains a dataset of PM-related bug patches collected between Jan' 2011 - Dec' 2020. Detailed analysis of this dataset can be found in our paper "[A Study of Persistent Memory Bugs in the Linux Kernel](https://dl.acm.org/doi/10.1145/3456727.3463783)", published at the [14th ACM International Systems and Storage Conference (SYSTOR)](https://www.systor.org/2021/index.html), 2021.
-- **Dext**: Contains an extended set of PM-related bug patches collected between Jan' 2021 - Dec' 2021. We perform similar analysis as the patches in **Dinit** dataset, and published our results to ACM Transactions on Storage Journal 2022 (Under Review). Sections 4 and 5 in our journal submission provide additional details regarding this dataset.
-- **PM-Reproducibility**: This folder contains workloads and scripts to reproduce a subset of bug patches. Additional details can be found in Section 6 of our journal submission.
-- **DrChecker+**: Contains our ported version of [Dr. Checker](https://www.usenix.org/system/files/conference/usenixsecurity17/sec17-machiry.pdf) to perform static analysis of PM Kernel Modules. Section 7.3 in our journal provides additional details.
+Step2: compile Dr.Checker+
+```
+    cd llvm_analysis
+    ./build.sh
+```
+
+Step3: run Dr.Checker+ with compiled persistent memeory driver modules in the Linux kerenl
+
+```
+cd <repo_dir>/llvm_analysis/MainAnalysisPasses/build_dir/SoundyAliasAnalysis
+# running the dr.checker pass
+opt -load ./libSoundyAliasAnalysis.so -dr_checker -toCheckFunction="hidraw_ioctl" -functionType="IOCTL" -outputFile="hidraw_ioctl.drcheck.json" /home/drchecker/33.2.A.3.123/llvm_bc_out/drivers/hid/llvm_link_final/final_to_check.bc
+```
 
 
-We hope that our dataset is helpful and could contribute to the development of effective PM bug detectors and building robust PM-based systems.
-
-Please feel free to direct your concerns or feedback to: Duo Zhang (duozhang@iastate.edu) Om Rameshwar Gatla (ogatla@iastate.edu)
