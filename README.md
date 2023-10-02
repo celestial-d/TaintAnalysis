@@ -4,7 +4,7 @@ The repo is part of our Persistent Memory project, and the result of PM-related 
 
 - "[Understanding Persistent-Memory Related Issues in the Linux Kernel](https://arxiv.org/abs/2307.04095)", Om Rameshwar Gatla, Duo Zhang, Wei Xu, Mai Zheng, ACM TRANSACTIONS ON STORAGE(TOS), 2023
 
-We leverage LLVM to perform inter/intra process analysis for persistent memroy drivers, and identifed some potential issues. Please check our Transaction for details.
+We leverage LLVM to perform inter/intra-process analysis for persistent memroy drivers, and identifed some potential issues. Please check our Transaction for details.
 
 ## DrChecker+
 
