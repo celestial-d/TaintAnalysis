@@ -7,6 +7,8 @@ The repo is part of our Persistent Memory project, and the result of PM-related 
 
 ## DrChecker+
 
+The work is based on LLVM10
+
 Step1: compile kerenl drviers with wllvm
 
 Step2: compile Dr.Checker+
