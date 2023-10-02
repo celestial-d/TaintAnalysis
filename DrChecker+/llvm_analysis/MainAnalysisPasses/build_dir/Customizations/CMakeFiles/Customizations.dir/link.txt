@@ -1,0 +1,2 @@
+/usr/bin/ar qc libCustomizations.a  CMakeFiles/Customizations.dir/src/FunctionChecker.cpp.o
+/usr/bin/ranlib libCustomizations.a
