@@ -2,7 +2,7 @@
 
 The repo is part of our Persistent Memory project, and the result of PM-related drivers was published in ACM TRANSACTIONS ON STORAGE(TOS):
 
--"[Understanding Persistent-Memory Related Issues in the Linux Kernel](https://arxiv.org/abs/2307.04095)", Om Rameshwar Gatla, Duo Zhang, Wei Xu, Mai Zheng, ACM TRANSACTIONS ON STORAGE(TOS), 2023
+- "[Understanding Persistent-Memory Related Issues in the Linux Kernel](https://arxiv.org/abs/2307.04095)", Om Rameshwar Gatla, Duo Zhang, Wei Xu, Mai Zheng, ACM TRANSACTIONS ON STORAGE(TOS), 2023
 
 
 ## DrChecker+
