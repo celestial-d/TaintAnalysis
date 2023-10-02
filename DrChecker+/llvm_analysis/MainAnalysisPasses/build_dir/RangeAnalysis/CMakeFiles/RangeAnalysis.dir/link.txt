@@ -1,2 +1,0 @@
-/usr/bin/ar qc libRangeAnalysis.a  CMakeFiles/RangeAnalysis.dir/src/RangeAnalysis.cpp.o CMakeFiles/RangeAnalysis.dir/src/vSSA.cpp.o
-/usr/bin/ranlib libRangeAnalysis.a

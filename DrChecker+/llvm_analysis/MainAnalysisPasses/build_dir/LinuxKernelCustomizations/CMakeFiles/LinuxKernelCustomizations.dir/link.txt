@@ -1,2 +1,0 @@
-/usr/bin/ar qc libLinuxKernelCustomizations.a  CMakeFiles/LinuxKernelCustomizations.dir/src/KernelFunctionChecker.cpp.o
-/usr/bin/ranlib libLinuxKernelCustomizations.a
